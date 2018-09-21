@@ -1,0 +1,534 @@
+/* oswald */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Oswald ExtraLight'), local('Oswald-ExtraLight'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-1h4Tus9CAZek1w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752GT8Gl-1PKw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohoTus9CAZek1w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/*roboto*/
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Uniform */
+
+*{
+  margin:0%;
+  padding:0%;
+}
+
+html{
+  background-color:mintcream;
+  font-size:18px;
+}
+
+h1, h2, h3, span{
+  font-family:'Oswald';
+}
+
+p{
+  font-family: 'Roboto';
+}
+
+
+a:link{
+  color:black;
+  text-decoration: none;
+  transition: color 200ms ease-out ;
+}
+
+
+a:hover{
+  color:aquamarine;
+}
+
+
+/* Header */
+
+header{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  background-color: mintcream;
+}
+
+header .logounit{
+  display: flex;
+  align-items: center;
+}
+
+header .colmar{
+  font-weight:bold;
+}
+
+header .academy{
+  font-weight:200;
+}
+
+.logounit, nav{
+  padding:1% 1.2%;
+}
+
+nav{
+  display:flex;
+  width:60%;
+  justify-content: flex-end;
+  align-items: center;
+  font-size:1rem;
+  font-weight: 200;
+}
+
+nav span{
+  padding:10px;
+}
+
+nav .fa{
+  display: none;
+}
+
+@media only screen and (max-width:700px){
+ header .logounit .colmar, header .logounit .academy{
+    display:none;
+  }
+
+  header {
+    width:95%;
+    margin: 0 auto;
+  }
+
+  header nav span{
+    display:none;
+  }
+
+header nav {
+  justify-content: space-between;
+}
+  header nav .fa {
+    display:inline-block;
+  }
+}
+
+/* Banner */
+
+.banner{
+  display:flex;
+  justify-content: flex-left;
+  align-items: center;
+  background-color:powderblue;
+}
+
+.banner h1{
+  font-size:3rem;
+  line-height: 1;
+  padding: 1rem 2rem;
+}
+
+.banner p{
+  font-size: 1rem;
+  padding: 1rem 2rem;
+}
+
+.banner img{
+  margin:2rem;
+  width:50%;
+  height:auto;
+}
+
+.banner .button{
+  font-size: 1rem;
+  background-color:papayawhip;
+  display:inline-block;
+  margin: 1rem 2rem;
+  padding: 1rem;
+  border-radius: 30px;
+  transition: background-color 300ms ease-out;
+}
+
+
+.banner .button:hover{
+  background-color: aquamarine;
+}
+
+@media only screen and (max-width:700px){
+  .banner{
+    flex-direction: column;
+  }
+  .banner h1{
+    font-size: 2.7rem;
+    line-height: 1.1;
+  }
+
+.banner img{
+  width:87%;
+}
+
+  .banner .button{
+    font-size:1.5rem;
+    padding:1rem 10% 1rem 10%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+
+/* Information  */
+
+.information{
+  display:flex;
+}
+
+@media only screen and (max-width:700px){
+  .information{
+    flex-direction: column;
+  }
+}
+
+/* Information Main  */
+
+.information .information-main{
+  width:60%;
+  display:flex;
+  flex-direction: column;
+}
+
+.information-main .text{
+  bottom:2rem;
+  margin: 1rem 2rem 2rem 2rem;
+}
+
+.information-main .text h2, .information-main .text p, .information-main .text span{
+  padding-bottom: 1rem;
+}
+
+.information-main img{
+  width:92%;
+  height: auto;
+  margin: 2rem 2rem 1rem 2rem;
+}
+
+@media only screen and (max-width:700px){
+  .information .information-main{
+    width:100%;
+  }
+}
+
+/* Information Side */
+
+.information .information-side{
+  width:40%;
+  background-color: powderblue;
+}
+
+.information-side .item {
+  display:flex;
+  align-items: center;
+  padding:3%;
+  transition: background-color 300ms ease-out;
+  /*border: 0.5px solid;*/
+}
+
+.information-side .item:nth-child(odd){
+  background-color: lightcyan;
+}
+
+.information-side .item:hover{
+  background-color: aquamarine;
+}
+
+.information-side .item img{
+  width:35%;
+  height:auto;
+  margin: 1rem;
+  align-self: auto;
+
+}
+
+.information-side .item img.wide{
+  display:none;
+}
+
+.information-side .item .text{
+  margin: 2rem;
+}
+
+.information-side .item .text h3{
+  font-size:1.5rem;
+  padding-bottom:0.75rem;
+}
+
+.information-side .item .text p{
+  font-size: 0.7rem;
+  padding-bottom:2rem;
+}
+
+.information-side .item .text span{
+  color: darkcyan;
+}
+
+
+@media only screen and (max-width:700px){
+  .information .information-side{
+    width:100%;
+  }
+
+  .information-side .item {
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .information-side .item img.wide{
+    display: block;
+    width:90%;
+    margin:1 auto;
+    align-self: auto;
+  }
+
+  .information-side .item img{
+  display: none;
+}
+
+  .information-side .item .text{
+    margin: 0.5rem 1rem;
+  }
+
+}
+
+
+/* Courses */
+
+.courses{
+  background-color: darkcyan;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: block;
+
+}
+
+.courses h1{
+  font-size:3rem;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom:1rem;
+}
+
+.courses-items{
+  width:90%;
+  margin: 0 auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+.courses .courses-items .item{
+  width:30%;
+  background-color:papayawhip;
+  margin: 1rem;
+  transition: background-color 300ms ease-out;
+
+}
+
+.courses .courses-items .item:hover{
+  background-color: aquamarine;
+}
+
+.courses .item img{
+  width: 100%;
+}
+
+.courses .item .text{
+  padding: 1rem 2rem;
+}
+
+.courses .item .text h3{
+  font-size:2rem;
+ padding-bottom: 1rem;
+}
+
+.courses .item .text span{
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  font-size:0.7rem;
+  font-weight: 200;
+}
+
+.courses .item .text p{
+  padding-bottom:1rem;
+}
+
+
+@media only screen and (max-width:700px){
+  .courses .courses-items .item{
+    width:100%;
+    border-radius: 30px;
+
+  }
+
+  .courses .item img, .courses .item .text p, .courses .item .text span{
+    display:none;
+  }
+
+  .courses .item .text h3{
+    font-size: 1.5rem;
+    padding-bottom:0;
+  }
+}
+
+/*Thesis */
+
+#thesis{
+  background-color: mintcream;
+}
+
+#thesis h1{
+  padding:2rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.thesis-content{
+  display:flex;
+}
+
+
+@media only screen and (max-width:700px){
+  .thesis-content{
+    flex-direction: column;
+  }
+}
+
+/*Thesis main*/
+
+
+.thesis-content .thesis-main{
+  width:60%;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+
+.thesis-content .thesis-main video{
+  margin: 0 auto;
+  width:90%;
+}
+
+.thesis-content .thesis-main .text{
+  padding:2rem;
+}
+
+.thesis-content .thesis-main .text h3{
+  font-size:2rem;
+  padding-bottom: 1rem;
+}
+
+.thesis-content .thesis-main .text p{
+  padding-bottom: 1rem;
+}
+
+
+@media only screen and (max-width:700px){
+  .thesis-content .thesis-main{
+    width:100%;
+  }
+}
+
+/*Thesis Side*/
+
+
+.thesis-content .thesis-side{
+  width:40%;
+  display:flex;
+  flex-direction: column;
+}
+
+.thesis-content .thesis-side .item {
+  display:flex;
+  align-items: center;
+  background-color:papayawhip ;
+  transition: background-color 300ms ease-out;
+
+}
+
+.thesis-content .thesis-side .item:nth-child(even){
+  background-color: lightcyan;
+}
+
+.thesis-content .thesis-side .item:hover{
+  background-color:aquamarine;
+}
+
+.thesis-content .thesis-side .item img{
+  width:35%;
+  height:auto;
+  align-self: center;
+  margin:1rem;
+}
+
+.thesis-content .thesis-side .item .text{
+  margin: 2rem;
+}
+
+.thesis-content .thesis-side .item .text h3{
+  font-size:1.5rem;
+  padding-bottom:1rem;
+}
+
+
+.thesis-content .thesis-side .item .text p{
+  font-size:0.75rem;
+}
+
+
+@media only screen and (max-width:700px){
+  .thesis-content .thesis-side{
+    display:none;
+  }
+}
+
+
+/* footer */
+
+
+footer {
+  background-color: papayawhip;
+  padding: 1rem 2rem 3rem 2rem;
+}
+
+footer span{
+  font-size: 0.7rem;
+  font-weight:200;
+}
+
+
+@media only screen and (max-width:700px){
+  footer {
+    padding: 2rem 2rem;
+    }
+
+  footer span{
+    font-size:1rem;
+  }
+
+}
